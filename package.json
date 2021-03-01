@@ -1,0 +1,27 @@
+{
+  "name": "tallernode",
+  "version": "1.0.0",
+  "description": "Taller de Node el cual usa axios, htpp, fs",
+  "main": "script.js",
+  "dependencies": {
+    "axios": "^0.21.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node script.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SantiagoVargasVe/ejercicioNode.git"
+  },
+  "keywords": [
+    "Heroku",
+    "Node."
+  ],
+  "author": "Santiago Vargas Vega",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SantiagoVargasVe/ejercicioNode/issues"
+  },
+  "homepage": "https://github.com/SantiagoVargasVe/ejercicioNode#readme"
+}
