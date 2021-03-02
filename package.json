@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/SantiagoVargasVe/ejercicioNode/issues"
   },
+  "engines": {
+    "node": "10.19"
+  },  
   "homepage": "https://github.com/SantiagoVargasVe/ejercicioNode#readme"
 }
