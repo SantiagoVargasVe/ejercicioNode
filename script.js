@@ -37,7 +37,6 @@ const server = http.createServer(async function (req, res) {
         await getProovedores()
         let i = 1
         let bodyTable = ''
-        console.log(contentproveedores)
 
         for (let j = 0 ; j < contentproveedores.length;j++){
             let proveedor = contentproveedores[j];
@@ -52,11 +51,9 @@ const server = http.createServer(async function (req, res) {
         fs.writeFileSync('proveedores.html',html)
         fs.createReadStream('proveedores.html').pipe(res)
         fs.unlinkSync('proveedores.html')
-
-
     }
 
-    if (req.url === "/api/clientes"){
+    else if(req.url === "/api/clientes"){
         let head = `<th scope="col">ID</th>
         <th scope="col">Nombre Compañia</th>
         <th scope="col">Contacto</th> `
@@ -66,9 +63,8 @@ const server = http.createServer(async function (req, res) {
         let bodyTable = ''
         for (let j = 0 ; j < contentclientes.length;j++){
             let proveedor = contentclientes[j];
-            console.log(proveedor)
             bodyTable+= `<tr>`
-            bodyTable+= `<td> ${proveedor.idCliente}</td> <td>${proveedor.NombreCompania}</td> <td>${proveedor.nombrecontacto}</td>`  
+            bodyTable+= `<td> ${proveedor.idCliente}</td> <td>${proveedor.NombreCompania}</td> <td>${proveedor.NombreContacto}</td>`  
             bodyTable+= `</tr>`
         }
 
@@ -76,6 +72,10 @@ const server = http.createServer(async function (req, res) {
         fs.writeFileSync('clientes.html',html)
         fs.createReadStream('clientes.html').pipe(res)
         fs.unlinkSync('clientes.html')
+        
+    }
+    else{
+        fs.createReadStream('home.html').pipe(res)
     }
 
     })
