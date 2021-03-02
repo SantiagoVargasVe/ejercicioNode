@@ -8,6 +8,7 @@
   },
   "devDependencies": {},
   "scripts": {
+    "start": "node script.js",
     "test": "node script.js"
   },
   "repository": {
@@ -25,6 +26,6 @@
   },
   "engines": {
     "node": "10.19"
-  },  
+  },
   "homepage": "https://github.com/SantiagoVargasVe/ejercicioNode#readme"
 }
